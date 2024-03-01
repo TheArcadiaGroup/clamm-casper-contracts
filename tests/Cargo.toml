@@ -1,0 +1,27 @@
+[package]
+edition = "2018"
+name = "tests"
+version = "0.1.0"
+
+[dependencies]
+casper-engine-test-support = { version = "7.0.1", features = ["test-support"] }
+casper-execution-engine = { version = "7.0.1" }
+casper-types = "4.0.1"
+casper_types_derive = "0.1.0"
+common = { path = "../common" }
+contract-utilities = { path = "../contract-utilities" }
+hex = { version = "0.4.3", default-features = false }
+math = { path = "../math" }
+once_cell = "1.8.0"
+rand = "0.7.0"
+serde = { version = "1", features = [
+    "derive",
+    "alloc",
+], default-features = false }
+types = { path = "../types" }
+test-env = { path = "./test-env" }
+
+[lib]
+bench = false
+doctest = false
+name = "tests"

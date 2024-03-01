@@ -1,0 +1,10 @@
+[workspace]
+
+members = [
+    "router",
+    "cep47-tests"
+]
+
+[profile.release]
+codegen-units = 1
+lto = true

@@ -1,0 +1,21 @@
+[package]
+authors = ["akirapham <vancam.pham@hotmail.com>"]
+edition = "2018"
+name = "types"
+version = "0.1.0"
+
+[dependencies]
+base64 = { version = "0.13.0", default-features = false, features = ["alloc"] }
+casper-contract = { version = "4.0.0", features = [
+    "test-support",
+], default-features = false }
+casper-event-standard = { git = "https://github.com/akirapham/casper-event-standard.git", default-features = false }
+casper-types = "4.0.1"
+casper_types_derive = "0.1.0"
+contract-utilities = { path = "../contract-utilities" }
+hex = { version = "0.4.3", default-features = false }
+serde = { version = "1", features = [
+    "derive",
+    "alloc",
+], default-features = false }
+ethnum = "1"

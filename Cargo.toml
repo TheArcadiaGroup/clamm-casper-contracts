@@ -1,0 +1,27 @@
+[workspace]
+members = [
+  "math",
+  "common",
+  "tests",
+  "tests/test-math-session",
+  "types",
+  "factory",
+  "router/router",
+  "router/utils/contract-utils",
+  "tests/test-session",
+  "liquidity-session",
+  "swap-session",
+  "tests/test-callee",
+  "tests/test-env",
+  "tests/test-get-session",
+  "contract-storage",
+  "contract-utilities",
+]
+
+default-members = ["math"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+overflow-checks = true

@@ -1,0 +1,33 @@
+[package]
+edition = "2018"
+name = "test-callee"
+version = "0.1.0"
+
+[dependencies]
+base64 = { version = "0.13.0", default-features = false, features = ["alloc"] }
+casper-contract = { version = "4.0.0", features = ["test-support"] }
+casper-event-standard = { git = "https://github.com/akirapham/casper-event-standard.git", default-features = false }
+casper-serde-json-wasm = { git = "https://github.com/darthsiroftardis/casper-serde-json-wasm", branch = "casper-no-std" }
+casper-types = "4.0.1"
+casper_types_derive = "0.1.0"
+common = { path = "../../common" }
+contract-utilities = { path = "../../contract-utilities" }
+ethnum = "1"
+hex = { version = "0.4.3", default-features = false }
+math = { path = "../../math" }
+types = { path = "../../types" }
+serde = { version = "1", features = [
+    "derive",
+    "alloc",
+], default-features = false }
+
+[[bin]]
+bench = false
+doctest = false
+name = "test-callee"
+path = "src/main.rs"
+test = false
+
+[profile.release]
+codegen-units = 1
+lto = true

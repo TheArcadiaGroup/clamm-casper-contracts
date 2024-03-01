@@ -1,0 +1,12 @@
+[package]
+name = "contract-utilities"
+version = "0.2.0"
+authors = ["akirapham <vancam.pham@hotmail.com>"]
+edition = "2018"
+
+[dependencies]
+casper-types = "4.0.1"
+base64 = { version = "0.13.0", default-features = false, features = ["alloc"] }
+casper-contract = { version = "4.0.0", features = ["test-support"], default-features = false }
+hex = { version = "0.4.3", default-features = false }
+serde = { version = "1", features = ["derive", "alloc"], default-features = false }
